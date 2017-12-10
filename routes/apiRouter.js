@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const Schemas = require('../modules/db')
 
-//Controllers
 
 
 
