@@ -10,11 +10,12 @@ router.all('/', (req, res) => {
 })
 
 router.get('/9999', (req, res) => {
-  console.log("IP :", req.ip);
-  console.log("headers :", req.headers);
+  const ip = req.ip
+  console.log("IP :", ip);
+  console.log("HEADERS :", req.headers);
 
   const visitorData = new Schemas.Visitor({
-    ip : res.ip,
+    ip : ip,
     headers : req.headers
   })
 
@@ -28,7 +29,7 @@ router.get('/9999', (req, res) => {
 
 
   res.send({
-    IP : req.ips,
+    IP : ip,
     Headers : req.headers
   })
 })
