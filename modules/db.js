@@ -8,8 +8,15 @@ const VistorSchema = new Schema({
   headers : Schema.Types.Mixed
 })
 
+const SearchSchema = new Schema({
+  ip : Schema.Types.Mixed,
+  userAgeant : Schema.Types.Mixed,
+  searchTerm : Schema.Types.Mixed
+})
+
 
 
 module.exports = {
-  Visitor : mongoose.model('Visitor', VistorSchema)
+  Visitor : mongoose.model('Visitor', VistorSchema),
+  Search : mongoose.model('Search', SearchSchema)
 }
